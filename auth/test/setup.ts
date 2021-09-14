@@ -8,7 +8,7 @@ let mongo: any
 // Declare global variable
 declare global { namespace NodeJS { interface Global { signin(): Promise<string[]> } } }
 beforeAll(async () => {
-    process.env.JWT_KEY = "asdf";
+    process.env.JWT_KEY = "yasirshariff";
     mongo = new MongoMemoryServer();
     const mongoUri = await mongo.getUri();
 
