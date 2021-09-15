@@ -27,15 +27,15 @@ const SignUp = () => {
             <h1>Sign up</h1>
             <div className="from-group">
                 <label htmlFor="">Email </label>
-                <input className="form-control" type="email" name="" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input className="form-control m-2" type="email" name="" value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className="from-group">
                 <label htmlFor="">Password</label>
-                <input className="form-control"
+                <input className="form-control m-2"
                     value={password} type="password" onChange={(e) => { setPassword(e.target.value) }} />
             </div>
             {errors}
-            <button className="btn btn-primary mt-2">Sign Up</button>
+            <button className="btn btn-primary m-2">Sign Up</button>
         </form>
     );
 }
