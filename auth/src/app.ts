@@ -9,8 +9,8 @@ import { signupRouter } from "./routes/signup";
 import { signoutRouter } from "./routes/signout";
 
 // Middleware
-import { errorHandler } from "./middleware/error-handler";
-import { NotFoundError } from "./errors/not-found-error";
+import { errorHandler } from "@itsyasir/common";
+import { NotFoundError } from "@itsyasir/common";
 const app = express();
 // trust proxy
 app.set("trust proxy", true);
