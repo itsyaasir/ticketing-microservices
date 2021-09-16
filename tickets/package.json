@@ -18,7 +18,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@itsyasir/common": "^1.0.5",
+        "@itsyasir/common": "^1.0.6",
         "@types/cookie-session": "^2.0.42",
         "@types/express": "^4.17.11",
         "@types/jsonwebtoken": "^8.5.1",
