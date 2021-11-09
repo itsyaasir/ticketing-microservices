@@ -1,7 +1,7 @@
 import request from "supertest"
 import { app } from "../../app"
 
-it("returns a 201 on succesfull signup", async () => {
+it("returns a 201 on succesfull signup", async () => {  // it is a test case which returns 201 on succesfull signup
     return request(app)
         .post("/api/users/signup")
         .send({
@@ -12,7 +12,7 @@ it("returns a 201 on succesfull signup", async () => {
 });
 
 
-it("returns 400 with an invalid email", async () => {
+it("returns 400 with an invalid email", async () => { // it is a test case which returns 400 with an invalid email
     return request(app)
         .post("/api/users/signup")
         .send({
@@ -22,7 +22,7 @@ it("returns 400 with an invalid email", async () => {
         .expect(400);
 });
 
-it("returns 400 with an invalid password", async () => {
+it("returns 400 with an invalid password", async () => { // it is a test case which returns 400 with an invalid password
     return request(app)
         .post("/api/users/signup")
         .send({
@@ -32,7 +32,7 @@ it("returns 400 with an invalid password", async () => {
         .expect(400);
 });
 
-it("returns 400 with missing email and password", async () => {
+it("returns 400 with missing email and password", async () => { // it is a test case which returns 400 with missing email and password
     await request(app)
         .post("/api/users/signup")
         .send({
@@ -49,7 +49,7 @@ it("returns 400 with missing email and password", async () => {
         .expect(400);
 });
 
-it("disallows duplicate emails", async () => {
+it("disallows duplicate emails", async () => { // it is a test case which disallows duplicate emails    
     await request(app)
         .post("/api/users/signup")
         .send({
@@ -66,7 +66,7 @@ it("disallows duplicate emails", async () => {
         .expect(400);
 });
 
-it("sets a cookie after succesfull sign up", async () => {
+it("sets a cookie after succesfull sign up", async () => { // it is a test case which sets a cookie after succesfull sign up
     const response = await request(app)
         .post("/api/users/signup")
         .send({

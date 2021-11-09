@@ -12,23 +12,23 @@ import { signoutRouter } from "./routes/signout";
 import { errorHandler, NotFoundError } from "@itsyasir/common";
 const app = express();
 // trust proxy
-app.set("trust proxy", true);
+app.set("trust proxy", true);  // trust first proxy
 
-app.use(json());
+app.use(json());  // parse json
 // Adding cookie-session support
 app.use(cookieSession({
     signed: false,
     secure: process.env.NODE_ENV !== "test"
-}));
+}));  // secure: true for https
 // Routes
-app.use(currentUserRouter);
-app.use(signinRouter);
-app.use(signupRouter);
-app.use(signoutRouter);
+app.use(currentUserRouter); // current user
+app.use(signinRouter); // signin
+app.use(signupRouter); // signup
+app.use(signoutRouter); // signout
 
 app.all("*", async (req, res) => {
     throw new NotFoundError();
-});
-app.use(errorHandler);
+}); // 404
+app.use(errorHandler);  // Error handler
 
-export { app };
+export { app };  // Exporting app 
